@@ -6,7 +6,7 @@ services:
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: app_pass
       POSTGRES_DB: notes_db
-      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_INITDB_ARGS: "--auth-host=md5 --auth-local=md5"
     ports:
       - "5432:5432"
     volumes:
