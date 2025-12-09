@@ -13,7 +13,7 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   backend:
-    image: mariethereseh/notes-backend:latest
+    build: ./backend  # Changed from image to build
     container_name: notes-backend
     environment:
       DB_HOST: db
@@ -25,6 +25,14 @@ services:
       - "3000:3000"
     depends_on:
       - db
+
+  frontend:
+    build: ./frontend
+    container_name: notes-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
 
 volumes:
   pgdata:
