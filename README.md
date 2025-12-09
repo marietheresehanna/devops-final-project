@@ -58,6 +58,13 @@ CREATE TABLE notes (
 
 ## 🐳 Docker Compose Deployment
 
+### Docker Ignore Files
+
+This project includes `.dockerignore` files for both the backend and frontend.  
+They exclude unnecessary files such as `node_modules`, logs, Git metadata, and environment files from the Docker build context.  
+This reduces image size, improves build speed, and prevents leaking development artifacts.
+
+
 ### Prerequisites
 - Docker Desktop installed
 - Docker Compose installed
@@ -203,6 +210,9 @@ kubectl apply -f k8s/frontend-deployment.yaml
 # Expose frontend service
 kubectl apply -f k8s/frontend-service.yaml
 ```
+
+Frontend → /notes → Proxied to backend API
+
 
 #### 4. Verify Deployment
 
