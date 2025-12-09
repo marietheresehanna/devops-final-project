@@ -479,7 +479,9 @@ Delete a note by ID
 
 ## 👥 Team Members
 
-- Marie Therese H
+- Marie Therese Hanna (243104)
+- Elise Nassar (220913)
+- Sara Nehme (220956)
 
 ## 📚 Technologies Used
 
